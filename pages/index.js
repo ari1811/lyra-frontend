@@ -1,3 +1,4 @@
+import InvestmentForm from '../components/InvestmentForm';
 import CustomNavbar from '../components/Navbar';
 import { Container, Button } from 'react-bootstrap';
 
@@ -6,7 +7,9 @@ export default function Home() {
     <>
       <CustomNavbar />
       <div className="hero-section" style={{
-        background: "url('/background-image.jpg') no-repeat center center/cover",
+        backgroundImage: "url('/background-image.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         height: "100vh",
         color: "white",
         textAlign: "center",
@@ -15,12 +18,15 @@ export default function Home() {
         justifyContent: "center",
         flexDirection: "column"
       }}>
-        <h2 className="fw-bold text-warning">STABLE FINANCIAL INVESTMENTS</h2>
+        <h1 className="fw-bold text-warning">STABLE FINANCIAL INVESTMENTS</h1>
         <p className="text-light w-50">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
         </p>
         <Button variant="warning" size="lg">Start Investing →</Button>
       </div>
+      <Container className="mt-5">
+        <InvestmentForm />
+      </Container>
     </>
   );
 }
