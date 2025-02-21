@@ -1,3 +1,11 @@
+import InvestmentForm from '../components/InvestmentForm';
+
 export default function Home() {
-  return <h1>Welcome to Lyra Frontend</h1>;
+  return (
+    <div>
+      <h1>Welcome to Lyra Frontend</h1>
+      <InvestmentForm />
+    </div>
+  );
 }
+
