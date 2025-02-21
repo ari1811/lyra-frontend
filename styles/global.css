@@ -1,0 +1,23 @@
+body {
+  background-color: #0A192F;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  padding: 15px 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-warning {
+  background-color: #FFD700;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #E5C100;
+}
