@@ -1,39 +1,28 @@
 import Link from 'next/link';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 
-export default function Navbar() {
+export default function CustomNavbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#0A192F' }}>
-      <div className="container">
-        <Link className="navbar-brand text-warning" href="/">Lyra</Link>
-        <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link text-light" href="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-light" href="/about">About</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-light" href="/contact">Contact</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="btn btn-warning text-dark ms-3" href="/signup">Sign Up</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar expand="lg" style={{ backgroundColor: '#0B1C39' }} variant="dark">
+      <Container>
+        <Navbar.Brand href="/" className="text-warning fw-bold">
+          LYRA
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="#" className="text-light">About</Nav.Link>
+            <Nav.Link href="#" className="text-light">Products</Nav.Link>
+            <Nav.Link href="#" className="text-light">Performance</Nav.Link>
+            <Nav.Link href="#" className="text-light">News</Nav.Link>
+            <Nav.Link href="#" className="text-light">Contact</Nav.Link>
+            <Button variant="outline-warning" className="ms-3">Invest With Us</Button>
+            <Button variant="primary" className="ms-3" style={{ backgroundColor: '#0B1C39', borderColor: 'gold' }}>
+              Stakeholders Login
+            </Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
